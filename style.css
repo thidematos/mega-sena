@@ -1,0 +1,136 @@
+@import url(Reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --font: 'Lobster';
+  --otherFont: 'Roboto';
+  --first: #fed049;
+  --second: #cffde1;
+  --third: #68b984;
+  --fourth: #3d5656;
+}
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, var(--first), var(--third));
+  background-size: 300% 300%;
+  animation-name: gradient;
+  animation-duration: 7s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#sectionMain {
+  display: flex;
+  width: 70vw;
+  background-color: var(--third);
+  padding: 1rem;
+  flex-flow: row nowrap;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.312);
+}
+#listNumber {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.listItem,
+.listSortedItems,
+#qtdNumbers {
+  background-color: var(--second);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font: 400 1.5rem var(--font);
+  color: var(--fourth);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.257);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.271);
+  cursor: pointer;
+}
+
+#sortedNumbers {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#qtdNumbers {
+  border: none;
+  text-align: center;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  display: none;
+}
+
+#sectionSecond {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin-top: 1rem;
+}
+.active {
+  background-color: var(--first);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.anotherContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#sort,
+#clean {
+  border: none;
+  padding: 0.8rem;
+  font: 700 2rem var(--font);
+  cursor: pointer;
+  background-color: var(--second);
+  text-align: center;
+  border-radius: 10px;
+}
+
+label {
+  font: 700 1.5rem var(--otherFont);
+}
+@keyframes gradient {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
