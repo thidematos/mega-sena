@@ -9,6 +9,7 @@ for (let i = 1; i <= 60; i++) {
   list.appendChild(num);
   num = '';
 }
+
 //Listening Clicks
 const selectNumbers = document.querySelectorAll('.listItem');
 let activeNumbers = 0;
@@ -37,8 +38,8 @@ for (let i = 0; i < selectNumbers.length; i++) {
     }
   });
 }
-//Sorting Numbers
 
+//Sort Button
 const btnSort = document.querySelector('#sort');
 const sortedList = document.querySelector('#sortedNumbers');
 const listItems = document.querySelectorAll('.listItem');
@@ -88,6 +89,7 @@ btnSort.addEventListener('click', function () {
   activeNumbers = qtdNumbers.value;
 });
 
+//Clean Button
 const btnClean = document.querySelector('#clean');
 
 btnClean.addEventListener('click', function () {
